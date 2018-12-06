@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send IT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css" />
+    <link rel="icon" type="icon/image-x" href="../../static/img/icon.png" />
+    <script type="text/javascript">
+        if (! localStorage.getItem('token')){
+            window.location.href = '../../index.html'
+        }
+    </script> 
+</head>
+<body>
+    <header id='inside-header'>
+        <img src="../../static/img/icon.png" class="icon" />
+        <ul>
+            <li><a href="order.html">order</a></li>
+            <li><a href="list.html">list</a></li>
+            <li class="active"><a href="profile.html">profile</a></li>
+            <li><a href="#" onclick="logout()">logout</a></li>
+        </ul>
+    </header>
+
+    <div class="banner-up inside">
+        <div class='session'>
+            <h1 id="time-value">00:00</h1>
+            <p>your logout session</p>
+        </div>
+        <img src="../../static/img/banner-up.png" />
+    </div>
+
+    <div class="breadcrumb">
+        <h3>User Profile</h3>
+        <ul>
+            <li>Home</li>
+            <li>/</li>
+            <li>Profile</li>
+        </ul>
+    </div>
+
+    <div class="services" style="margin-bottom: 30px;">
+        <div class="order-form">
+            <p id='error-meso'></p>
+            <div class="form-left profile">
+                <img src="../../static/img/ava.jpg" />
+            </div>
+            <div class="form-right profile">
+                <div class="text">
+                    <h3>username</h3>
+                    <p id='profile-username'></p>
+                </div>
+                
+                <div class="text">
+                    <h3>fullname</h3>
+                    <p id='profile-fullname'></p>
+                </div>
+
+                <div class="text">
+                    <h3>contact</h3>
+                    <p id='profile-contact'></p>
+                </div>
+                
+                <div class="text">
+                    <h3>email address</h3>
+                    <p id='profile-email'></p>
+                </div>
+
+                <div class="sys-stats green">
+                    <h1 id='user-pending-order'></h1>
+                    <p>Pending Orders</p>
+                </div>
+                <div class="sys-stats orange">
+                    <h1 id='user-transit-order'></h1>
+                    <p>In-Transit Orders</p>
+                </div>
+                <div class="sys-stats blue">
+                    <h1 id='user-delivered-order'></h1>
+                    <p>Delivered Orders</p>
+                </div>
+                <div class="sys-stats red">
+                    <h1 id='user-cancelled-order'></h1>
+                    <p>Cancelled Orders</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; copy rights reserved</p>
+    </footer>
+</body>
+<script src="../../static/js/process.js"></script>
+</html>
