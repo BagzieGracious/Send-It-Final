@@ -1,0 +1,13 @@
+Login
+---
+tags:
+  - Authentication
+parameters:
+  - in: body
+    name: body
+    required: true
+    type: json object
+    description: route or endpoint provides a user to a login section
+responses:
+  200:
+    description: you have logged in successfully
