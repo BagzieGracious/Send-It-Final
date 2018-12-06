@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send IT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css" />
+    <link rel="icon" type="icon/image-x" href="../../static/img/icon.png" />
+    <script type="text/javascript">
+        if (! localStorage.getItem('token')){
+            window.location.href = '../../index.html'
+        }
+    </script>
+</head>
+<body>
+    <header id='inside-header'>
+        <img src="../../static/img/icon.png" class="icon" />
+        <ul>
+            <li><a href="home.html">home</a></li>
+            <li class="active"><a href="list.html">orders</a></li>
+            <li><a href="#" onclick="logout()">logout</a></li>
+        </ul>
+    </header>
+
+    <div class="banner-up inside">
+        <div class='session'>
+            <h1 id="time-value">00:00</h1>
+            <p>your logout session</p>
+        </div>
+        <img src="../../static/img/banner-up.png" />
+    </div>
+
+    <div class="breadcrumb">
+        <h3>Single Order</h3>
+        <ul>
+            <li>Home</li>
+            <li>/</li>
+            <li>List</li>
+        </ul>
+    </div>
+
+    <div class="about-us" id="product-details">
+        <div class='about-us-content' id="single-order">
+            <p id="error-meso"></p>
+        </div>
+    </div>
+
+    <div class="login-wrapper" id="login-wrapper">
+        <div class="wrap">
+            <p><img src="../../static/img/icon.png" /></p>
+            <div class="form">
+                <p id="login-error"></p>
+                <div class="text">
+                    <label>New Status</label>
+                    <input type="text" id="order-status" placeholder="enter new status" /> 
+                </div>
+                <div class="text">
+                    <button class="success" onclick="change_status()">Change</button>
+                    <button class="danger" onclick="cls()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="login-wrapper" id='signup-wrapper'>
+        <div class="wrap">
+            <p><img src="../../static/img/icon.png" /></p>
+            <div class="form">
+                <p id="login-error"></p>
+                <div class="text">
+                    <label>New Location</label>
+                    <input type="text" id="present-location" placeholder="enter new location" /> 
+                </div>
+                <div class="text">
+                    <button class="success" onclick="change_present_location()">Change</button>
+                    <button class="danger" onclick="cls()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner-down">
+        <img src="../../static/img/map1.PNG" />
+    </div>
+
+    <footer>
+        <p>&copy; copy rights reserved</p>
+    </footer>
+</body>
+<script src="../../static/js/main.js"></script>
+<script src="../../static/js/process.js"></script>
+</html>
